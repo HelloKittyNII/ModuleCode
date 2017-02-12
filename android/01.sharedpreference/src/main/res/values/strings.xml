@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">01.sharedPreference</string>
+    <string name="rem_password">是否记住密码</string>
+    <string name="login">确定</string>
+</resources>
