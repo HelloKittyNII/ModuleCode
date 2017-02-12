@@ -1,0 +1,6 @@
+rootProject.name = 'design'
+include 'listener'
+include 'observer'
+include 'factory'
+findProject(':observer')?.name = 'observe'
+

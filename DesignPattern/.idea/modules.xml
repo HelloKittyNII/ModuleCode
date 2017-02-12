@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/design.iml" filepath="$PROJECT_DIR$/.idea/modules/design.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/design_main.iml" filepath="$PROJECT_DIR$/.idea/modules/design_main.iml" group="design" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/design_test.iml" filepath="$PROJECT_DIR$/.idea/modules/design_test.iml" group="design" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/factory/factory.iml" filepath="$PROJECT_DIR$/.idea/modules/factory/factory.iml" group="factory" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/factory/factory_main.iml" filepath="$PROJECT_DIR$/.idea/modules/factory/factory_main.iml" group="factory" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/factory/factory_test.iml" filepath="$PROJECT_DIR$/.idea/modules/factory/factory_test.iml" group="factory" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/listener/listener.iml" filepath="$PROJECT_DIR$/.idea/modules/listener/listener.iml" group="listener" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/listener/listener_main.iml" filepath="$PROJECT_DIR$/.idea/modules/listener/listener_main.iml" group="listener" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/listener/listener_test.iml" filepath="$PROJECT_DIR$/.idea/modules/listener/listener_test.iml" group="listener" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/observer/observe.iml" filepath="$PROJECT_DIR$/.idea/modules/observer/observe.iml" group="observe" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/observer/observe_main.iml" filepath="$PROJECT_DIR$/.idea/modules/observer/observe_main.iml" group="observe" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/observer/observe_test.iml" filepath="$PROJECT_DIR$/.idea/modules/observer/observe_test.iml" group="observe" />
+    </modules>
+  </component>
+</project>
