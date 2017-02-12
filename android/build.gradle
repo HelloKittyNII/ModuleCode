@@ -1,0 +1,11 @@
+group 'com.nii'
+version '1.0-SNAPSHOT'
+
+allprojects {
+    repositories {
+        mavenCentral()
+    }
+
+
+}
+
