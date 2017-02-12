@@ -1,0 +1,67 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xmlns:mvc="http://www.springframework.org/schema/mvc"
+	   xmlns:context="http://www.springframework.org/schema/context"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+		http://www.springframework.org/schema/mvc
+		http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-3.2.xsd
+		\">
+ 
+	<context:component-scan base-package="com.mkyong.helloworld.web" />
+
+
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+		<property name="prefix" value="/WEB-INF/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+ 
+	<mvc:resources mapping="/resources/**" location="/resources/" />
+	 
+	<mvc:annotation-driven />
+
+	<!-- 加载配置文件 -->
+	<context:property-placeholder location="classpath:/jdbc/jdbc.properties" />
+	<!-- 数据库连接池 -->
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+		  destroy-method="close">
+		<property name="driverClassName" value="${jdbc.driver}" />
+		<property name="url" value="${jdbc.url}" />
+		<property name="username" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />
+		<property name="maxActive" value="10" />
+		<property name="maxIdle" value="5" />
+	</bean>
+
+	<!-- 配置sqlSessionFactory -->
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"/>
+		<!-- mybatis全局配置文件 -->
+		<property name="configLocation" value="classpath:jdbc/mybatis-config.xml"/>
+
+	</bean>
+
+
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+
+		<!-- 使用sqlSessionFactoryBeanName注入sqlSessionFactory -->
+		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+
+		<property name="basePackage" value="com.mkyong.helloworld.web.mapper"/>
+
+
+		<!--
+		注意： 这里使用sqlSessionFactoryBeanName而不使用sqlSessionFactory原因如下：
+			MapperScannerConigurer在扫描mapper时需要注入 sqlSessionFactory，如果使用
+			<property name="sqlSessionFactory" ref="sqlSessionFactory"/>
+			会存在PropertyPlaceholderConfigurer还没来得及替换dataSource定义中的${jdbc.driver}
+			等数据源变量就注入到了MapperScannerConigurer中，将导致数据库连接不上，如果改为如下方式可以解决问题：
+		 -->
+
+	</bean>
+
+ 
+</beans>

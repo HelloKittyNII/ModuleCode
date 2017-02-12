@@ -1,0 +1,67 @@
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
+
+	<!--添加描述 -->
+	<display-name>Gradle + Spring MVC Hello World + XML</display-name>
+	<description>Spring MVC web application</description>
+
+	<!-- 配置核心控制器 -->
+	<servlet>
+		<servlet-name>hello-dispatcher</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+
+			<!-- 设置容器配置文件的加载的路径 -->
+			<param-name>contextConfigLocation</param-name>
+			<param-value>classpath:/spring/spring-mvc-config.xml</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<!-- 为DispatcherServlet建立映射 -->
+	<servlet-mapping>
+		<servlet-name>hello-dispatcher</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+
+	<!-- 配置监听器-->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+
+	<!-- 配置文件的加载路径 -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath:/spring/*.xml</param-value>
+	</context-param>
+
+
+
+	<!-- 解决工程编码过滤器 -->
+	<filter>
+		<filter-name>CharacterEncodingFilter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>utf-8</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>CharacterEncodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<error-page>
+		<error-code>404</error-code>
+		<location>/WEB-INF/jsp/error/error404.jsp</location>
+	</error-page>
+
+
+
+
+
+
+
+</web-app>
