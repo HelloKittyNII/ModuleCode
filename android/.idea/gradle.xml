@@ -9,8 +9,12 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/01.sharedpreference" />
+            <option value="$PROJECT_DIR$/02.sqlite" />
             <option value="$PROJECT_DIR$/03.listview" />
-            <option value="$PROJECT_DIR$/03.orcale" />
+            <option value="$PROJECT_DIR$/04.activity" />
+            <option value="$PROJECT_DIR$/05.receiver" />
+            <option value="$PROJECT_DIR$/06.dialog" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

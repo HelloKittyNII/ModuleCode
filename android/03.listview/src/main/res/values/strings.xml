@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">sqlite</string>
+    <string name="app_name">ListView</string>
     <string name="title">Orcale Listview</string>
     <string name="save">Save </string>
 </resources>

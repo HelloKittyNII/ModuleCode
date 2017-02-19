@@ -2,11 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="comnii.activity" >
 
+    <!--打电话的权限-->
     <uses-permission android:name="android.permission.CALL_PHONE"/>
 
+    <!--存储权限-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
-    <!-- 否则不能监听每个状态 -->
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
 
     <application
         android:allowBackup="true"

@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/01.sharedpreference/01.sharedpreference.iml" filepath="$PROJECT_DIR$/.idea/modules/01.sharedpreference/01.sharedpreference.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/02.sqlite/02.sqlite.iml" filepath="$PROJECT_DIR$/.idea/modules/02.sqlite/02.sqlite.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/03.listview/03.listview.iml" filepath="$PROJECT_DIR$/.idea/modules/03.listview/03.listview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/04.activity/04.activity.iml" filepath="$PROJECT_DIR$/.idea/modules/04.activity/04.activity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/05.receiver/05.receiver.iml" filepath="$PROJECT_DIR$/.idea/modules/05.receiver/05.receiver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/06.dialog/06.dialog.iml" filepath="$PROJECT_DIR$/.idea/modules/06.dialog/06.dialog.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/android.iml" filepath="$PROJECT_DIR$/.idea/modules/android.iml" />
     </modules>
   </component>
