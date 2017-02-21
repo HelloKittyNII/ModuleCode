@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:background="#4496BE"
+              android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/weinxin"
+        android:text="微信"
+        android:textSize="15dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:background="@color/transparent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+            android:id="@+id/chat"
+            android:text="通讯录"
+            android:textSize="15dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@color/transparent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <Button
+            android:id="@+id/find"
+            android:text="发现"
+            android:textSize="15dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@color/transparent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <Button
+            android:id="@+id/me"
+            android:text="我"
+            android:textSize="15dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@color/transparent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+</LinearLayout>

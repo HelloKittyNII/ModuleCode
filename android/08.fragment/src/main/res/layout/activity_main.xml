@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.nii.fragment.MainActivity">
+
+    <fragment
+            android:id="@+id/id_fragment_title"
+            android:name="com.nii.fragment.TitleFragment"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp" />
+
+    <include
+            android:id="@+id/id_ly_bottombar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            layout="@layout/bottom_bar_main" />
+
+    <FrameLayout
+            android:id="@+id/id_content"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@id/id_ly_bottombar"
+            android:layout_below="@id/id_fragment_title" />
+</RelativeLayout>

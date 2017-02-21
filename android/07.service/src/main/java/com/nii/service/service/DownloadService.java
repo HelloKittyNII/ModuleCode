@@ -1,11 +1,15 @@
 package com.nii.service.service;
 
+import android.app.Notification;
+import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
 import android.os.IBinder;
 import android.support.annotation.Nullable;
 import android.util.Log;
+import com.nii.service.MainActivity;
+import com.nii.service.R;
 import com.nii.service.binder.DownloadBinder;
 
 /**
@@ -21,6 +25,17 @@ public class DownloadService extends Service
     public void onCreate()
     {
         super.onCreate();
+        
+        Notification notification = new Notification.Builder(this)
+                .setAutoCancel(true)
+                .setContentTitle("title")
+                .setContentText("describe")
+                .setSmallIcon(R.mipmap.ic_launcher)
+                .setWhen(System.currentTimeMillis())
+                .build();
+
+        startForeground(1, notification);
+
         Log.d(TAG, "onCreate() executed");
     }
 
